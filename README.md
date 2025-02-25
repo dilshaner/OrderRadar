@@ -33,7 +33,7 @@ OrderRadar automatically shows you:
 - **Field Staff:** Quick customer history checks
 
 ## Easy Installation 📥
-1. Download the `.zip` file [Click Here]([https://github.com/dilshaner/OrderRadar/archive/refs/heads/main.zip]
+1. Download the `.zip` file [Click Here](https://github.com/dilshaner/OrderRadar/archive/refs/heads/main.zip)
 2. Unzip the file to a folder you can find later
 3. In Chrome:
    - Go to `chrome://extensions`
