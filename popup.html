@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery + WhatsApp Assistant</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: black;
+    }
+
+    .logo {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      margin: 0 0 16px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e293b;
+      letter-spacing: -0.3px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #22c55e;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .status {
+      font-size: 13px;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      line-height: 1.4;
+    }
+
+    .success {
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    .error {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    .data-management {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .progress-status {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #64748b;
+      margin: 8px 0;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .footer a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <span class="header-title">OrderRadar V1.0</span>
+    <a href="https://projects.talkz.lk/" target="_blank">
+      <img src="icons/logo.svg" alt="OrderRadar Logo" class="logo">
+    </a>
+  </div>
+
+  <div class="section">
+    <h3>Single Number Check</h3>
+    <input type="text" id="singleNumber" placeholder="Enter phone number">
+    <button id="checkSingle">Check Delivery History</button>
+    <div id="singleResult" class="status"></div>
+  </div>
+
+  <div class="section">
+    <h3>Data Management</h3>
+    <div class="data-management">
+      <button id="exportData">Export Data</button>
+      <button id="checkLogin">Check Login</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>For more Free tools, visit <a href="https://projects.talkz.lk/" target="_blank">projects.talkz.lk</a></p>
+    <p>Join our WhatsApp Channel for updates: <a href="https://whatsapp.com/channel/0029Vb6kWQXElah0xszH0y04" target="_blank">Click here</a></p>
+    <a href="legal.html" target="_blank">Terms & Privacy</a> | 
+    <a href="https://github.com/dilshaner/OrderRadar" target="_blank">Source Code</a> | 
+    <a href="https://projects.talkz.lk/OrderRadar" target="_blank">Documentation</a>
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>

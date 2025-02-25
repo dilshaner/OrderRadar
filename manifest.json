@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "OrderRadar",
+  "version": "1.0",
+  "description": "Easily track your customers' past order behavior and make smarter business decisions.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://koombiyodelivery.lk/*",
+    "https://web.whatsapp.com/*",
+    "https://whatsapp.com/*",
+    "https://github.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "intro.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}
